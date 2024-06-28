@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+:root {
+    --clr-main: red;
+    --clr-main-light: green;
+
+}
+.container{
+    max-width: 1140px;
+    padding-inline: 1.5rem;
+    margin: 0 auto;
+}
+
+.navbar{
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: red;
+    border-bottom: 2px solid black;
+
+}
+.logo{
+    text-decoration: none;
+    color: black;
+}
+.menu{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.menu-link{
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+
+}
+.menu-link-hover{
+    text-decoration: underline;
+}
+.productos{
+    display: grid;
+    grid-template-columns:   repeat(3, 1fr);
+    gap: 5rem;
+    padding-block: 2rem;
+    margin-top: 5rem;
+    margin-left: 1rem;
+    
+}
+.producto{
+    
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    overflow: hidden;
+    
+}
+.producto > div{
+    padding: 1rem;
+    background-color:grey ;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.producto > img{
+    width: 110%;
+    aspect-ratio: 2/1;
+    object-fit: cover;
+
+}
+.producto .ver-mas{
+    text-decoration: none;
+    background-color: tomato;
+    color: white;
+    padding: .5rem;
+    width: max-content;
+}
+.producto .ver-mas:hover{
+    background-color: black;
+    color: white;
+}
+.producto-detalle{
+    padding-block: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+}
+.producto-detalle img{
+    width: 100%;
+}
+.producto-detalle-info h3{
+    font-size: 2rem;
+
+}
+.categoria{
+    font-size: .8rem;
+    color: darkmagenta;
+    margin-top: 1rem;
+}
+.precio{
+    font-size: 2rem;
+    margin-top: 2rem;
+    font-weight: 600;
+}
+.titulo{
+    text-align: center;
+}
+.descripcion{
+    margin-left:4px ;
+}
+
