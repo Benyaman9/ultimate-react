@@ -2,10 +2,14 @@ import React, { useEffect, useState } from 'react'
 import data from "../data/productos.json"
 import pedirProductos from "./pedirProducto";
 import ItemList from "./itemList.jsx";
+import { useParams } from 'react-router-dom';
 
 const ItemListContainer = () => {
 
     const [productos, setProductos] = useState([]);
+    const [titulo, setTitulo] = useState("Productos");
+    const categoria = useParams().categoria;
+    console.log(categoria);
 
 
 
@@ -19,10 +23,20 @@ const ItemListContainer = () => {
     useEffect(() => {
         pedirProductos()
             .then((res) => {
-                setProductos(res);
+                if (categoria){
+                    setProductos(res.filter((prod) => prod.categoria === categoria));
+                    setTitulo(categoria);
+
+                } else{
+                    setProductos(res);
+                    setTitulo("Productos");
+                }
+                
+
+                
             })
 
-    }, [])
+    }, [categoria])
 
 
 
@@ -30,7 +44,7 @@ const ItemListContainer = () => {
 
     return (
         <div>
-            <ItemList productos={productos} />
+            <ItemList productos={productos} titulo={titulo} />
 
 
 

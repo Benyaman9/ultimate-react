@@ -1,15 +1,17 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const NavBar = () => {
     return (
         <nav className='navbar'>
-            <a href="#" className="logo"><h1>BenyaShop</h1></a>
+            <Link to="/" className="logo"><h1>BenyaShop</h1></Link>
             <ul className="menu">
-                <li><a className='menu-link' href="#">Inicio</a></li>
-                <li><a className='"menu-link"' href="#">Nosotros</a></li>
-                <li><a className='"menu-link"' href="#">Productos</a></li>
-                <li><a className='"menu-link"' href="#">Contacto</a></li>
-                <li><a className='"menu-link"' href="#"></a></li>
+                <li><Link className='menu-link' to="/">Inicio</Link></li>
+                <li><Link className='"menu-link"' to="/productos">Productos</Link></li>
+                <li><Link className='"menu-link"' to="/productos/ropa">Ropa</Link></li>
+                <li><Link className='"menu-link"' to="/productos/accesorios">Accesorios</Link></li>
+                <li><Link className='"menu-link"' to="/productos/tecnologia">Tecnologia</Link></li>
+                <li><Link className='"menu-link"' to="/productos/perfumes">Perfumes</Link></li>
             </ul>
 
 
