@@ -12,6 +12,7 @@ const NavBar = () => {
                 <li><Link className='"menu-link"' to="/productos/accesorios">Accesorios</Link></li>
                 <li><Link className='"menu-link"' to="/productos/tecnologia">Tecnologia</Link></li>
                 <li><Link className='"menu-link"' to="/productos/perfumes">Perfumes</Link></li>
+                <li><Link className='"menu-link"' to="/nosotros">Nosotros</Link></li>
             </ul>
 
 
