@@ -2,18 +2,18 @@ import React, { useEffect } from 'react'
 
 const Nosotros = () => {
 
-    useEffect(() =>{
-        const clickear = () =>{
+    useEffect(() => {
+        const clickear = () => {
             console.log("click");
         }
 
 
         window.addEventListener("click", clickear)
 
-        return () =>{
+        return () => {
             window.removeEventListener("click", clickear)
         }
-    },[])
+    }, [])
     return (
         <div className='container'>
             <h1 className='main-title'>Nosotros</h1>

@@ -1,3 +1,4 @@
+import Contacto from "./components/data/Contacto"
 import ItemDetailContainer from "./components/data/ItemDetailContainer"
 import ItemListContainer from "./components/data/ItemListContainer"
 import NavBar from "./components/data/NavBar"
@@ -19,6 +20,7 @@ function App() {
         <Route path="/productos" element={<ItemListContainer />} />
         <Route path="/productos/:categoria" element={<ItemListContainer />} />
         <Route path="/nosotros" element={<Nosotros />} />
+        <Route path="/contacto" element={<Contacto />} />
       </Routes>
 
 
