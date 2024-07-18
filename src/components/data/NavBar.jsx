@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import CartWidget from './CartWidget'
+import { CartContext } from '../../context/cartContext'
 
 const NavBar = () => {
     return (
@@ -14,6 +16,7 @@ const NavBar = () => {
                 <li><Link className='"menu-link"' to="/productos/perfumes">Perfumes</Link></li>
                 <li><Link className='"menu-link"' to="/nosotros">Nosotros</Link></li>
                 <li><Link className='"menu-link"' to="/contacto">Contacto</Link></li>
+                <li><CartWidget/></li>
             </ul>
 
 

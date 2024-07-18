@@ -1,3 +1,4 @@
+
 import Contacto from "./components/data/Contacto"
 import ItemDetailContainer from "./components/data/ItemDetailContainer"
 import ItemListContainer from "./components/data/ItemListContainer"
@@ -5,10 +6,19 @@ import NavBar from "./components/data/NavBar"
 import Nosotros from "./components/data/Nosotros"
 import "./components/data/main.css"
 import { BrowserRouter, Route, Routes} from "react-router-dom"
+import  { CartProvider }  from "./context/cartContext"
+
+import Carrito from "./components/data/Carrito"
 
 function App() {
+
+  
+  
+
+
   return (
     <div>
+      <CartProvider>
       <BrowserRouter>
 
 
@@ -21,6 +31,7 @@ function App() {
         <Route path="/productos/:categoria" element={<ItemListContainer />} />
         <Route path="/nosotros" element={<Nosotros />} />
         <Route path="/contacto" element={<Contacto />} />
+        <Route path="/carrito" element={<Carrito/>} />
       </Routes>
 
 
@@ -30,6 +41,8 @@ function App() {
       
       
       </BrowserRouter>
+      </CartProvider>
+      
     </div>
   )
 
