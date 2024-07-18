@@ -9,6 +9,7 @@ import { BrowserRouter, Route, Routes} from "react-router-dom"
 import  { CartProvider }  from "./context/cartContext"
 
 import Carrito from "./components/data/Carrito"
+import CheckOut from "./components/data/CheckOut"
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
         <Route path="/nosotros" element={<Nosotros />} />
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/carrito" element={<Carrito/>} />
+        <Route path="/checkout" element={<CheckOut/>} />
       </Routes>
 
 
